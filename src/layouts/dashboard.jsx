@@ -19,7 +19,7 @@ export function Dashboard() {
       <Sidenav
         routes={routes}
         brandImg={
-          sidenavType === "dark" ? "/img/logo-ct.png" : "/img/logo-ct-dark.png"
+          sidenavType === "dark" ? "/img/prologis-white.png" : "/img/prologis-black.png"
         }
       />
       <div className="p-4 xl:ml-80">
@@ -51,6 +51,6 @@ export function Dashboard() {
   );
 }
 
-Dashboard.displayName = "/src/layout/dashboard.jsx";
+Dashboard.displayName = "Prologis Technology";
 
 export default Dashboard;

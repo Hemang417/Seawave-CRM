@@ -19,9 +19,51 @@ export const routes = [
     pages: [
       {
         icon: <HomeIcon {...icon} />,
-        name: "dashboard",
+        name: "Home",
         path: "/home",
         element: <Home />,
+      },
+      {
+        icon: <TableCellsIcon {...icon} />,
+        name: "Import",
+        path: "/tables",
+        element: <Tables />,
+      },
+      {
+        icon: <TableCellsIcon {...icon} />,
+        name: "Export",
+        path: "/tables",
+        element: <Tables />,
+      },
+      {
+        icon: <TableCellsIcon {...icon} />,
+        name: "Transport",
+        path: "/tables",
+        element: <Tables />,
+      },
+      {
+        icon: <TableCellsIcon {...icon} />,
+        name: "Freight",
+        path: "/tables",
+        element: <Tables />,
+      },
+      {
+        icon: <TableCellsIcon {...icon} />,
+        name: "Finances",
+        path: "/tables",
+        element: <Tables />,
+      },
+      {
+        icon: <BellIcon {...icon} />,
+        name: "Marketing",
+        path: "/notifactions",
+        element: <Notifications />,
+      },
+      {
+        icon: <BellIcon {...icon} />,
+        name: "CRM",
+        path: "/notifactions",
+        element: <Notifications />,
       },
       {
         icon: <UserCircleIcon {...icon} />,
@@ -29,38 +71,27 @@ export const routes = [
         path: "/profile",
         element: <Profile />,
       },
-      {
-        icon: <TableCellsIcon {...icon} />,
-        name: "tables",
-        path: "/tables",
-        element: <Tables />,
-      },
-      {
-        icon: <BellIcon {...icon} />,
-        name: "notifactions",
-        path: "/notifactions",
-        element: <Notifications />,
-      },
+      
     ],
   },
-  {
-    title: "auth pages",
-    layout: "auth",
-    pages: [
-      {
-        icon: <ArrowRightOnRectangleIcon {...icon} />,
-        name: "sign in",
-        path: "/sign-in",
-        element: <SignIn />,
-      },
-      {
-        icon: <UserPlusIcon {...icon} />,
-        name: "sign up",
-        path: "/sign-up",
-        element: <SignUp />,
-      },
-    ],
-  },
+  // {
+  //   title: "auth pages",
+  //   layout: "auth",
+  //   pages: [
+  //     {
+  //       icon: <ArrowRightOnRectangleIcon {...icon} />,
+  //       name: "sign in",
+  //       path: "/sign-in",
+  //       element: <SignIn />,
+  //     },
+  //     {
+  //       icon: <UserPlusIcon {...icon} />,
+  //       name: "sign up",
+  //       path: "/sign-up",
+  //       element: <SignUp />,
+  //     },
+  //   ],
+  // },
 ];
 
 export default routes;
