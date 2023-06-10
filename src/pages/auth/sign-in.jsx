@@ -39,9 +39,14 @@ export function SignIn() {
             </div>
           </CardBody>
           <CardFooter className="pt-0">
+            <Link
+              to="/dashboard/home"
+            >
             <Button variant="gradient" fullWidth>
               Sign In
             </Button>
+            </Link>
+            
             {/* <Typography variant="small" className="mt-6 flex justify-center">
               Don't have an account?
               <Link to="/auth/sign-up">
