@@ -25,6 +25,12 @@ export const routes = [
       },
       {
         icon: <TableCellsIcon {...icon} />,
+        name: "Create Job",
+        path: "/tables",
+        element: <Tables />,
+      },
+      {
+        icon: <TableCellsIcon {...icon} />,
         name: "Import",
         path: "/tables",
         element: <Tables />,
