@@ -6,7 +6,7 @@ import {
   ArrowRightOnRectangleIcon,
   UserPlusIcon,
 } from "@heroicons/react/24/solid";
-import { Home, Profile, Tables, Notifications } from "@/pages/dashboard";
+import { Home, Profile, Tables, Notifications, Import } from "@/pages/dashboard";
 import { SignIn, SignUp } from "@/pages/auth";
 
 const icon = {
@@ -32,31 +32,31 @@ export const routes = [
       {
         icon: <TableCellsIcon {...icon} />,
         name: "Import",
-        path: "/tables",
-        element: <Tables />,
+        path: "/import",
+        element: <Import />,
       },
       {
         icon: <TableCellsIcon {...icon} />,
         name: "Export",
-        path: "/tables",
+        path: "/export",
         element: <Tables />,
       },
       {
         icon: <TableCellsIcon {...icon} />,
         name: "Transport",
-        path: "/tables",
+        path: "/transport",
         element: <Tables />,
       },
       {
         icon: <TableCellsIcon {...icon} />,
         name: "Freight",
-        path: "/tables",
+        path: "/freight",
         element: <Tables />,
       },
       {
         icon: <TableCellsIcon {...icon} />,
         name: "Finances",
-        path: "/tables",
+        path: "/finance",
         element: <Tables />,
       },
       {
