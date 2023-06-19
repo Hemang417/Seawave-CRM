@@ -11,227 +11,93 @@ import {
   import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
   import { authorsTableData, projectsTableData } from "@/data";
   
-  export function Job() {
-    return (
-      // <div className="mt-12 mb-8 flex flex-col gap-12">
-      //   <Card>
-      //     <CardHeader variant="gradient" color="blue" className="mb-8 p-6">
-      //       <Typography variant="h6" color="white">
-      //         Authors Table
-      //       </Typography>
-      //     </CardHeader>
-      //     <CardBody className="overflow-x-scroll px-0 pt-0 pb-2">
-      //       <table className="w-full min-w-[640px] table-auto">
-      //         <thead>
-      //           <tr>
-      //             {["author", "function", "status", "employed", ""].map((el) => (
-      //               <th
-      //                 key={el}
-      //                 className="border-b border-blue-gray-50 py-3 px-5 text-left"
-      //               >
-      //                 <Typography
-      //                   variant="small"
-      //                   className="text-[11px] font-bold uppercase text-blue-gray-400"
-      //                 >
-      //                   {el}
-      //                 </Typography>
-      //               </th>
-      //             ))}
-      //           </tr>
-      //         </thead>
-      //         <tbody>
-      //           {authorsTableData.map(
-      //             ({ img, name, email, job, online, date }, key) => {
-      //               const className = `py-3 px-5 ${
-      //                 key === authorsTableData.length - 1
-      //                   ? ""
-      //                   : "border-b border-blue-gray-50"
-      //               }`;
-  
-      //               return (
-      //                 <tr key={name}>
-      //                   <td className={className}>
-      //                     <div className="flex items-center gap-4">
-      //                       <Avatar src={img} alt={name} size="sm" />
-      //                       <div>
-      //                         <Typography
-      //                           variant="small"
-      //                           color="blue-gray"
-      //                           className="font-semibold"
-      //                         >
-      //                           {name}
-      //                         </Typography>
-      //                         <Typography className="text-xs font-normal text-blue-gray-500">
-      //                           {email}
-      //                         </Typography>
-      //                       </div>
-      //                     </div>
-      //                   </td>
-      //                   <td className={className}>
-      //                     <Typography className="text-xs font-semibold text-blue-gray-600">
-      //                       {job[0]}
-      //                     </Typography>
-      //                     <Typography className="text-xs font-normal text-blue-gray-500">
-      //                       {job[1]}
-      //                     </Typography>
-      //                   </td>
-      //                   <td className={className}>
-      //                     <Chip
-      //                       variant="gradient"
-      //                       color={online ? "green" : "blue-gray"}
-      //                       value={online ? "online" : "offline"}
-      //                       className="py-0.5 px-2 text-[11px] font-medium"
-      //                     />
-      //                   </td>
-      //                   <td className={className}>
-      //                     <Typography className="text-xs font-semibold text-blue-gray-600">
-      //                       {date}
-      //                     </Typography>
-      //                   </td>
-      //                   <td className={className}>
-      //                     <Typography
-      //                       as="a"
-      //                       href="#"
-      //                       className="text-xs font-semibold text-blue-gray-600"
-      //                     >
-      //                       Edit
-      //                     </Typography>
-      //                   </td>
-      //                 </tr>
-      //               );
-      //             }
-      //           )}
-      //         </tbody>
-      //       </table>
-      //     </CardBody>
-      //   </Card>
-      //   <Card>
-      //     <CardHeader variant="gradient" color="blue" className="mb-8 p-6">
-      //       <Typography variant="h6" color="white">
-      //         Projects Table
-      //       </Typography>
-      //     </CardHeader>
-      //     <CardBody className="overflow-x-scroll px-0 pt-0 pb-2">
-      //       <table className="w-full min-w-[640px] table-auto">
-      //         <thead>
-      //           <tr>
-      //             {["companies", "members", "budget", "completion", ""].map(
-      //               (el) => (
-      //                 <th
-      //                   key={el}
-      //                   className="border-b border-blue-gray-50 py-3 px-5 text-left"
-      //                 >
-      //                   <Typography
-      //                     variant="small"
-      //                     className="text-[11px] font-bold uppercase text-blue-gray-400"
-      //                   >
-      //                     {el}
-      //                   </Typography>
-      //                 </th>
-      //               )
-      //             )}
-      //           </tr>
-      //         </thead>
-      //         <tbody>
-      //           {projectsTableData.map(
-      //             ({ img, name, members, budget, completion }, key) => {
-      //               const className = `py-3 px-5 ${
-      //                 key === projectsTableData.length - 1
-      //                   ? ""
-      //                   : "border-b border-blue-gray-50"
-      //               }`;
-  
-      //               return (
-      //                 <tr key={name}>
-      //                   <td className={className}>
-      //                     <div className="flex items-center gap-4">
-      //                       <Avatar src={img} alt={name} size="sm" />
-      //                       <Typography
-      //                         variant="small"
-      //                         color="blue-gray"
-      //                         className="font-bold"
-      //                       >
-      //                         {name}
-      //                       </Typography>
-      //                     </div>
-      //                   </td>
-      //                   <td className={className}>
-      //                     {members.map(({ img, name }, key) => (
-      //                       <Tooltip key={name} content={name}>
-      //                         <Avatar
-      //                           src={img}
-      //                           alt={name}
-      //                           size="xs"
-      //                           variant="circular"
-      //                           className={`cursor-pointer border-2 border-white ${
-      //                             key === 0 ? "" : "-ml-2.5"
-      //                           }`}
-      //                         />
-      //                       </Tooltip>
-      //                     ))}
-      //                   </td>
-      //                   <td className={className}>
-      //                     <Typography
-      //                       variant="small"
-      //                       className="text-xs font-medium text-blue-gray-600"
-      //                     >
-      //                       {budget}
-      //                     </Typography>
-      //                   </td>
-      //                   <td className={className}>
-      //                     <div className="w-10/12">
-      //                       <Typography
-      //                         variant="small"
-      //                         className="mb-1 block text-xs font-medium text-blue-gray-600"
-      //                       >
-      //                         {completion}%
-      //                       </Typography>
-      //                       <Progress
-      //                         value={completion}
-      //                         variant="gradient"
-      //                         color={completion === 100 ? "green" : "blue"}
-      //                         className="h-1"
-      //                       />
-      //                     </div>
-      //                   </td>
-      //                   <td className={className}>
-      //                     <Typography
-      //                       as="a"
-      //                       href="#"
-      //                       className="text-xs font-semibold text-blue-gray-600"
-      //                     >
-      //                       <EllipsisVerticalIcon
-      //                         strokeWidth={2}
-      //                         className="h-5 w-5 text-inherit"
-      //                       />
-      //                     </Typography>
-      //                   </td>
-      //                 </tr>
-      //               );
-      //             }
-      //           )}
-      //         </tbody>
-      //       </table>
-      //     </CardBody>
-      //   </Card>
-      // </div>
-      
+  export function JobCreation() {
+    return (      
   <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
           <div>
-              {/* <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First name</label> */}
-              <input type="text" id="first_name" class=" w-32 h-8 mb-8 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Job No./BL No." />
+              {/* <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First name</label>
+              <input type="text" id="first_name" class=" w-32 h-8 mb-8 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Job No./BL No." /> */}
               
           </div>
+          
+<form>
+    <div class="grid gap-2 mb-3 md:grid-cols-4 m-2">
+        <div>
+            <label for="job_no" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Job No.</label>
+            <input type="text" id="job_no" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="S/I/0001/23-24" required />
+        </div>
+        <div>
+            <label for="party_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Party Name</label>
+            <input type="text" id="party_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="PERMANENT MAGNET LTD" required />
+        </div>
+        <div>
+            <label for="mode" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mode</label>
+            <input type="text" id="mode" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Sea/Air" required />
+        </div>  
+        <div>
+            <label for="container_type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Container Type</label>
+            <input type="text" id="container_type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="20/40" required />
+        </div>
+        <div>
+            <label for="bl/awb" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">BL/AWB No.</label>
+            <input type="text" id="bl/awb" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="RTT7648909" required />
+        </div>
+        <div>
+            <label for="job_received_on" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Job Received On</label>
+            <input type="datetime-local" id="job_received_on" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        <div>
+            <label for="cfs_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">CFS Name</label>
+            <input type="text" id="cfs_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        <div>
+            <label for="be_type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">BE Type</label>
+            <input type="text" id="be_type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="123456" required />
+        </div>
+        <div>
+            <label for="shipping_line_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Shipping Line Name</label>
+            <input type="text" id="shipping_line_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        <div>
+            <label for="port_of_shipment" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Port of Shipment</label>
+            <input type="text" id="port_of_shipment" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="123456" required />
+        </div>
+        {/* <div>
+            <label for="remarks" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white ">Remarks</label>
+            <input type="text" id="remarks" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div> */}
+    </div>
+    <div class="mb-5 h-40 m-2">
+        <label for="remarks" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Remarks</label>
+        <input type="text" id="remarks" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 h-36" placeholder="" required />
+    </div> 
+    {/* <div class="mb-6">
+        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+        <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="•••••••••" required />
+    </div> 
+    <div class="mb-6">
+        <label for="confirm_password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm password</label>
+        <input type="password" id="confirm_password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="•••••••••" required />
+    </div> 
+    <div class="flex items-start mb-6">
+        <div class="flex items-center h-5">
+        <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required />
+        </div>
+        <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
+    </div> */}
+    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 m-2">Submit</button>
+</form>
+
       <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
-                  <th scope="col" class="p-4">
+                  {/* <th scope="col" class="p-4">
                       <div class="flex items-center">
                           <input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
                           <label for="checkbox-all-search" class="sr-only">checkbox</label>
                       </div>
-                  </th>
-                  <th scope="col" class="px-6 py-3">
+                  </th> */}
+                  {/* <th scope="col" class="px-6 py-3">
                       Product name
                   </th>
                   <th scope="col" class="px-6 py-3">
@@ -254,7 +120,7 @@ import {
                   </th>
                   <th scope="col" class="px-6 py-3">
                       Action
-                  </th>
+                  </th> */}
               </tr>
           </thead>
           {/* <tbody>
@@ -595,5 +461,5 @@ import {
     );
   }
   
-  export default Job;
+  export default JobCreation;
   
