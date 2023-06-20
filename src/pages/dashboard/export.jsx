@@ -215,75 +215,127 @@ import {
       //     </CardBody>
       //   </Card>
       // </div>
-      
-  <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+
+  <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+    
           <div>
               {/* <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First name</label> */}
               <input type="text" id="first_name" class=" w-32 h-8 mb-8 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Job No./BL No." />
+              
+
+
+<div date-rangepicker class="flex items-center">
+  <div class="relative">
+    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+    </div>
+    <input name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date start" />
+    
+  </div>
+  <span class="mx-4 text-gray-500">to</span>
+  <div class="relative">
+    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+    </div>
+    <input name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date end" />
+</div>
+</div>
+<br></br>
           </div>
-      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <table className="w-full text-sm text-left text-gray-500 dark:text-gray-500">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
                   <th scope="col" class="p-4">
                       <div class="flex items-center">
-                          <input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                          <label for="checkbox-all-search" class="sr-only">checkbox</label>
+                          {/* <input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                          <label for="checkbox-all-search" class="sr-only">checkbox</label> */}
                       </div>
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      Product name
+                      Date
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      Color
+                      Job No.
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      Category
+                      Exporter Name
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      Accesories
+                      SB No.
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      Available
+                      Checklist Sent
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      Price
+                      SB File
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      Weight
+                      Goods Receipt/Carting
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      Action
+                      LEO
                   </th>
+                  <th scope="col" class="px-6 py-3">
+                      Stuffing
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                      Handover to Carrier
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                      Billing
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                      Remarks
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                      
+                  </th>
+                  
               </tr>
           </thead>
           <tbody>
               <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                  <td class="w-4 p-4">
+                  <td class="w-4 px-4">
                       <div class="flex items-center">
                           <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
                           <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
                       </div>
                   </td>
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      Apple MacBook Pro 17"
+                  <th scope="row" class="px-4 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      19-06-2023 16:37:00
                   </th>
-                  <td class="px-6 py-4">
-                      Silver
+                  <td class="px-6 py-0 text-xs">
+                      S/I/0001/23-24
                   </td>
-                  <td class="px-6 py-4">
-                      Laptop
+                  <td class="px-6 py-0 text-xs">
+                      PERMANENT MAGNET LTD
                   </td>
-                  <td class="px-6 py-4">
-                      Yes
+                  <td class="px-6 py-0 text-xs">
+                      RTTT5787088
                   </td>
-                  <td class="px-6 py-4">
-                      Yes
+                  <td class="px-6 py-0 text-xs">
+                      20-06-2023
                   </td>
-                  <td class="px-6 py-4">
-                      $2999
+                  <td class="px-6 py-0 text-xs">
+                      19-06-2023 16:37:00
                   </td>
-                  <td class="px-6 py-4">
-                      3.0 lb.
+                  <td class="px-6 py-0 text-xs">
+                    19-06-2023 16:37:00
+                  </td>
+                  <td class="px-6 py-0 text-xs">
+                  19-06-2023 16:37:00
+                  </td>
+                  <td class="px-6 py-0 text-xs">
+                  19-06-2023 16:37:00
+                  </td>
+                  <td class="px-6 py-0 text-xs">
+                  19-06-2023 16:37:00
+                  </td>
+                  <td class="px-6 py-0 text-xs">
+                  19-06-2023 16:37:00
+                  </td>
+                  <td class="px-6 py-0 text-xs">
+                  Hello
                   </td>
                   <td class="flex items-center px-6 py-4 space-x-3">
                       <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
@@ -297,33 +349,48 @@ import {
                           <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
                       </div>
                   </td>
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      Microsoft Surface Pro
+                  <th scope="row" class="px-4 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      20-06-2023 16:39:50
                   </th>
                   <td class="px-6 py-4">
-                      White
+                  A/I/0002/23-24
                   </td>
                   <td class="px-6 py-4">
-                      Laptop PC
+                      MR. DIY 
                   </td>
                   <td class="px-6 py-4">
-                      No
+                  RTTT5787088
                   </td>
                   <td class="px-6 py-4">
-                      Yes
+                  20-06-2023
                   </td>
                   <td class="px-6 py-4">
-                      $1999
+                  19-06-2023 16:37:00	
                   </td>
                   <td class="px-6 py-4">
-                      1.0 lb.
+                  19-06-2023 16:37:00	
+                  </td>
+                  <td class="px-6 py-4">
+                      19-06-2023 16:37:00	
+                  </td>
+                  <td class="px-6 py-4">
+                      19-06-2023 16:37:00	
+                  </td>
+                  <td class="px-6 py-4">
+                      19-06-2023 16:37:00	
+                  </td>
+                  <td class="px-6 py-4">
+                      19-06-2023 16:37:00	
+                  </td>
+                  <td class="px-6 py-4">
+                      RISHI	
                   </td>
                   <td class="flex items-center px-6 py-4 space-x-3">
                       <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                       <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
                   </td>
               </tr>
-              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              {/* <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                   <td class="w-4 p-4">
                       <div class="flex items-center">
                           <input id="checkbox-table-search-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
@@ -586,7 +653,7 @@ import {
                       <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                       <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
                   </td>
-              </tr>
+              </tr> */}
           </tbody>
       </table>
   </div>

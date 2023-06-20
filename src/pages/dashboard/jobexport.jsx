@@ -11,7 +11,7 @@ import {
   import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
   import { authorsTableData, projectsTableData } from "@/data";
   
-  export function JobCreation() {
+  export function JobExport() {
     return (      
   <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
           <div>
@@ -21,47 +21,60 @@ import {
           </div>
           
 <form>
-    <div class="grid gap-2 mb-3 md:grid-cols-4 m-2">
-        <div>
-            <label for="job_no" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Job No.</label>
-            <input type="text" id="job_no" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="S/I/0001/23-24" required />
-        </div>
-        <div>
-            <label for="party_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Party Name</label>
-            <input type="text" id="party_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="PERMANENT MAGNET LTD" required />
-        </div>
-        <div>
-            <label for="mode" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mode</label>
-            <input type="text" id="mode" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Sea/Air" required />
-        </div>  
-        <div>
-            <label for="container_type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Container Type</label>
-            <input type="text" id="container_type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="20/40" required />
-        </div>
-        <div>
-            <label for="bl/awb" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">BL/AWB No.</label>
-            <input type="text" id="bl/awb" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="RTT7648909" required />
-        </div>
+    <div class="grid gap-2 mb-3 md:grid-cols-3 m-2">
         <div>
             <label for="job_received_on" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Job Received On</label>
-            <input type="datetime-local" id="job_received_on" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+            <input type="date" id="job_received_on" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        <div>
+            <label for="job_no" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Job No.</label>
+            <input type="text" id="job_no" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        <div>
+            <label for="importer_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Exporter Name</label>
+            <input type="text" id="importer_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>  
+        <div>
+            <label for="mode" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mode</label>
+            <input type="text" id="mode" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+            
+        </div>
+        <div>
+            <label for="container_type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Container Type</label>
+            <input type="text" id="container_type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        <div>
+            <label for="sb_no" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">SB No.</label>
+            <input type="text" id="sb_no" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        <div>
+            <label for="sb_date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">SB Date</label>
+            <input type="date" id="sb_date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        <div>
+            <label for="custom_house" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Custom House</label>
+            <input type="text" id="custom_house" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        <div>
+            <label for="destination_port" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Destination Port</label>
+            <input type="text" id="destination_port" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        <div>
+            <label for="no_of_container" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">No. of Conatiner</label>
+            <input type="text" id="no_of_container" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        {/* <div>
+            <label for="shipping_line" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Shipping Line/Carrier</label>
+            <input type="text" id="shipping_line" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
         </div>
         <div>
             <label for="cfs_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">CFS Name</label>
             <input type="text" id="cfs_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
         </div>
         <div>
-            <label for="be_type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">BE Type</label>
-            <input type="text" id="be_type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="123456" required />
-        </div>
-        <div>
-            <label for="shipping_line_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Shipping Line Name</label>
-            <input type="text" id="shipping_line_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
-        </div>
-        <div>
-            <label for="port_of_shipment" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Port of Shipment</label>
-            <input type="text" id="port_of_shipment" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="123456" required />
-        </div>
+            <label for="custom_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Custom Location</label>
+            <input type="text" id="custom_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div> */}
         {/* <div>
             <label for="remarks" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white ">Remarks</label>
             <input type="text" id="remarks" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
@@ -461,5 +474,5 @@ import {
     );
   }
   
-  export default JobCreation;
+  export default JobExport;
   
