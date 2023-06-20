@@ -45,7 +45,7 @@ export const routes = [
         icon: <TableCellsIcon {...icon} />,
         name: "Export",
         path: "/export",
-        element: <Tables />,
+        element: <Export />,
       },
       {
         icon: <TableCellsIcon {...icon} />,
