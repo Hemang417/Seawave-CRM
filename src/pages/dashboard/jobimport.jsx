@@ -11,7 +11,19 @@ import {
   import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
   import { authorsTableData, projectsTableData } from "@/data";
   
+  import React from 'react';
+  import {Select, MenuItem} from "@mui/material";
+
+  <MenuItem disabled value="">
+  None
+  </MenuItem>
+
+
+
+
+  
   export function JobImport() {
+    
     return (      
   <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
           <div>
@@ -35,13 +47,40 @@ import {
             <input type="text" id="importer_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
         </div>  
         <div>
-            <label for="mode" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mode</label>
-            <input type="text" id="mode" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        <label for="mode" class="block mb-2 text-sm font-medium text-grey-900 dark:text-white">Mode</label>
+        
+          <Select
+           sx={{
+           marginTop:0,        
+           width: 370,
+           height: 40,
+        
+          }}
+          > 
+        
+        <MenuItem value={1}>Sea</MenuItem>
+        <MenuItem value={2}>Air</MenuItem>
+          </Select>
+            {/*<label for="mode" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mode</label>
+            <input type="text" id="mode" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />  */}
             
         </div>
         <div>
-            <label for="container_type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Container Type</label>
-            <input type="text" id="container_type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+          <label for="container_type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Container Type</label>
+          <Select
+           sx={{
+           marginTop:0,        
+           width: 370,
+           height: 40,
+        
+           }}
+          > 
+          <MenuItem value={1}>20</MenuItem>
+          <MenuItem value={2}>40</MenuItem>
+          <MenuItem value={2}>LCL</MenuItem>
+          </Select>
+            {/*<label for="container_type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Container Type</label>
+            <input type="text" id="container_type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> */}
         </div>
         <div>
             <label for="HBL/HAWB No." class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">HBL/HAWB No.</label>
