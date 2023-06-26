@@ -6,7 +6,7 @@ import {
   ArrowRightOnRectangleIcon,
   UserPlusIcon,
 } from "@heroicons/react/24/solid";
-import { Home, Profile, Tables, Notifications, Import, JobExport,Export, JobImport } from "@/pages/dashboard";
+import { Home, Profile, Tables, Notifications, Import, JobExport, Export, JobImport } from "@/pages/dashboard";
 import { SignIn, SignUp } from "@/pages/auth";
 
 const icon = {
@@ -26,13 +26,13 @@ export const routes = [
       {
         icon: <TableCellsIcon {...icon} />,
         name: "Create Job - Import",
-        path: "/job Import",
+        path: "/jobimport",
         element: <JobImport />,
       },
       {
         icon: <TableCellsIcon {...icon} />,
         name: "Create Job - Export",
-        path: "/Job Export",
+        path: "/jobexport",
         element: <JobExport />,
       },
       {
