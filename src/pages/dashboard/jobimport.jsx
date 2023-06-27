@@ -54,7 +54,6 @@ import {
            marginTop:0,        
            width: 370,
            height: 40,
-        
           }}
           > 
         
