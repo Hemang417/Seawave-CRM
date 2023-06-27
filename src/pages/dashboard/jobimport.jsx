@@ -12,11 +12,11 @@ import {
   import { authorsTableData, projectsTableData } from "@/data";
   
   import React from 'react';
-  import {Select, MenuItem} from "@mui/material";
+//   import {Select, MenuItem} from "@mui/material";
 
-  <MenuItem disabled value="">
-  None
-  </MenuItem>
+//   <MenuItem disabled value="">
+//   None
+//   </MenuItem>
 
 
 
@@ -47,9 +47,15 @@ import {
             <input type="text" id="importer_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
         </div>  
         <div>
-        <label for="mode" class="block mb-2 text-sm font-medium text-grey-900 dark:text-white">Mode</label>
+        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mode</label>
+            <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected>Select</option>
+                <option value="US">Sea</option>
+                <option value="CA">Air</option>
+            </select>
+        {/* <label for="mode" class="block mb-2 text-sm font-medium text-grey-900 dark:text-white">Mode</label> */}
         
-          <Select
+          {/* <Select
            sx={{
            marginTop:0,        
            width: 370,
@@ -59,13 +65,20 @@ import {
         
         <MenuItem value={1}>Sea</MenuItem>
         <MenuItem value={2}>Air</MenuItem>
-          </Select>
+          </Select> */}
             {/*<label for="mode" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mode</label>
             <input type="text" id="mode" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />  */}
             
         </div>
         <div>
-          <label for="container_type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Container Type</label>
+        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Container Type</label>
+            <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected>Select</option>
+                <option value="US">20</option>
+                <option value="CA">40</option>
+                <option value="CA">LCL</option>
+            </select>
+          {/* <label for="container_type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Container Type</label>
           <Select
            sx={{
            marginTop:0,        
@@ -77,7 +90,7 @@ import {
           <MenuItem value={1}>20</MenuItem>
           <MenuItem value={2}>40</MenuItem>
           <MenuItem value={2}>LCL</MenuItem>
-          </Select>
+          </Select> */}
             {/*<label for="container_type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Container Type</label>
             <input type="text" id="container_type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> */}
         </div>

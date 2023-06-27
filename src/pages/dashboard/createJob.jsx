@@ -3,9 +3,16 @@ import { JobImport } from '.';
 import { JobExport } from '.';
 import { BrowserRouter, Link, NavLink, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
+import "../../../public/css/textColor.css";
 
 export function CreateJob() {
     const [isshown, setIsShown] = useState("import");
+    // const [textColor, setTextColor] = useState("textgray");
+    // const handletextcolor = () => {
+    //     setTextColor(textColor === 'blue' ? 'black' : 'blue');
+    //     setTextColor(textblue)
+
+    // }
     // const [isActive, setIsActive] = useState(false);
     // const handleActive = event => {
     //     setIsActive(now => !now);
@@ -20,7 +27,7 @@ export function CreateJob() {
     <div>
         <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400">
             <li class="mr-2" onClick={() => {setIsShown("import")}}>
-                <div class="inline-block p-4 text-blue-600 bg-gray-100 rounded-t-lg active dark:bg-gray-800 dark:text-blue-500">
+                <div class="inline-block p-4 bg-gray-100 rounded-t-lg active dark:bg-gray-800 dark:text-blue-500 hover:bg-gray-50">
                     Import
                     {/* {isshown} */}
                 </div>
