@@ -7,3 +7,4 @@ export * from "@/pages/dashboard/jobexport";
 export * from "@/pages/dashboard/jobimport";
 export * from "@/pages/dashboard/export";
 export * from "@/pages/dashboard/createJob";
+export * from "@/pages/dashboard/transport"

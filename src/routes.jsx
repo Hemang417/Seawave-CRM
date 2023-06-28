@@ -6,7 +6,7 @@ import {
   ArrowRightOnRectangleIcon,
   UserPlusIcon,
 } from "@heroicons/react/24/solid";
-import { Home, Profile, Tables, Notifications, Import, JobExport, Export, JobImport, CreateJob } from "@/pages/dashboard";
+import { Home, Profile, Tables, Notifications, Import, JobExport, Export, JobImport, CreateJob, Transport } from "@/pages/dashboard";
 import { SignIn, SignUp } from "@/pages/auth";
 
 const icon = {
@@ -57,7 +57,7 @@ export const routes = [
         icon: <TableCellsIcon {...icon} />,
         name: "Transport",
         path: "/transport",
-        element: <Tables />,
+        element: <Transport />,
       },
       {
         icon: <TableCellsIcon {...icon} />,
