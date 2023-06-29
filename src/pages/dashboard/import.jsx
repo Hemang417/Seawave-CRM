@@ -59,10 +59,13 @@ import {
                       Job No.
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      Party Name
+                      Importer Name
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      BL/AWB No.
+                      HBL/HAWB No.
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                      MBL/MAWB No.
                   </th>
                   <th scope="col" class="px-6 py-3">
                       ETA

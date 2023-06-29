@@ -59,31 +59,31 @@ import {
                       Job No.
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      Party Name
+                      Exporter Name
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      BL/AWB No.
+                      Checklist Sent
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      ETA
+                      SB No.
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      IGM
+                      SB File Date
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      Checklist
+                      Goods Receipt/Carting
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      E-Sanchit
+                      LEO
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      BOE Filling
+                      Stuffing
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      DO
+                      Handover to Carrier
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      Delivery
+                      Billing
                   </th>
                   <th scope="col" class="px-6 py-3">
                       Remarks
