@@ -8,6 +8,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { Home, Profile, Tables, Notifications, Import, JobExport, Export, JobImport, CreateJob, Transport } from "@/pages/dashboard";
 import { SignIn, SignUp } from "@/pages/auth";
+import Freight from "./pages/dashboard/freight";
 
 const icon = {
   className: "w-5 h-5 text-inherit",
@@ -63,7 +64,7 @@ export const routes = [
         icon: <TableCellsIcon {...icon} />,
         name: "Freight",
         path: "/freight",
-        element: <Tables />,
+        element: <Freight />,
       },
       {
         icon: <TableCellsIcon {...icon} />,
