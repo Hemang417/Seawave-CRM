@@ -134,6 +134,9 @@ import {
                   19-06-2023 16:37:00
                   </td>
                   <td class="px-6 py-0 text-xs">
+                  19-06-2023 16:37:00
+                  </td>
+                  <td class="px-6 py-0 text-xs">
                   Hello
                   </td>
               </tr>
