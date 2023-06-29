@@ -112,31 +112,34 @@ import {
             </li>
         </ul>
         <div>
-        <div class="grid gap-2 mb-3 md:grid-cols-4 m-2">
+        <div class="grid gap-1 mb-3 md:grid-cols-4 m-1">
         <div>
             <label for="job_received_on" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Milestone Name</label>
-            <input type="date" id="job_received_on" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+            <th scope="col" class="px-0 py-0" style={{fontSize:15}}>
+                  Checklist
+            </th>
         </div>
         <div>
-            <label for="job_no" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Plan Date</label>
-            <input type="text" id="job_no" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+            <label for="job_no" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white -mx-10">Plan Date</label>
+            <input type="datetime-local" id="job_no" class="-mx-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-max p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
         </div>
         <div className="flex flex-row">
           <div className="flex flex-col">
-          <label for="importer_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Actual Date</label>
-          <input type="text" id="importer_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+          <label for="importer_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white -mx-20">Actual Date</label>
+          <input type="localdatetime" id="importer_name" class="-mx-20 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-max p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
           </div>
-            <div className="flex m-8">
+            <div className="flex mx-24 my-8">
             <input type="checkbox"/>
             </div>
         </div>
         <div>
-            <label for="importer_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Remarks</label>
-            <input type="text" id="importer_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+            <label for="importer_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white -mx-20">Remarks</label>
+            <input type="text" id="importer_name" class="-mx-20 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-max p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
         </div>
         </div>
         </div>
     </div>
+    
     <div className="modal-action">
       {/* if there is a button in form, it will close the modal */}
       <button className="btn float-right my-56 mx-10">Save</button>
