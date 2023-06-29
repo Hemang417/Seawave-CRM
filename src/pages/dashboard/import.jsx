@@ -13,6 +13,7 @@ import {
   
   export function Import() {
     return (
+        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
         <div class="grid gap-2 mb-3 md:grid-cols-2 m-1">
         {/* <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Container Type</label> */}
             <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-max p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 h-max">
@@ -46,6 +47,7 @@ import {
 </div>
 </div>
 <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring- focus:outline-none focus:ring-blue-300 font-small rounded-lg text-sm w-max sm:w-max px-8 py-2.5 text-left dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 m-0">Search</button>
+        <div className="relative overflow-x-max shadow-md sm:rounded-lg">
       <table className="w-max text-sm text-center text-gray-500 dark:text-gray-500">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
@@ -94,6 +96,7 @@ import {
           </thead>
           <tbody>
               <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                  
                   <th scope="row" class="px-4 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                       19-06-2023 16:37:00
                   </th>
@@ -131,48 +134,12 @@ import {
                   Hello
                   </td>
               </tr>
-              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                  <th scope="row" class="px-4 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      20-06-2023 16:39:50
-                  </th>
-                  <td class="px-6 py-4">
-                  A/I/0002/23-24
-                  </td>
-                  <td class="px-6 py-4">
-                      MR. DIY 
-                  </td>
-                  <td class="px-6 py-4">
-                  RTTT5787088
-                  </td>
-                  <td class="px-6 py-4">
-                  20-06-2023
-                  </td>
-                  <td class="px-6 py-4">
-                  19-06-2023 16:37:00	
-                  </td>
-                  <td class="px-6 py-4">
-                  19-06-2023 16:37:00	
-                  </td>
-                  <td class="px-6 py-4">
-                      19-06-2023 16:37:00	
-                  </td>
-                  <td class="px-6 py-4">
-                      19-06-2023 16:37:00	
-                  </td>
-                  <td class="px-6 py-4">
-                      19-06-2023 16:37:00	
-                  </td>
-                  <td class="px-6 py-4">
-                      19-06-2023 16:37:00	
-                  </td>
-                  <td class="px-6 py-4">
-                      RISHI	
-                  </td>
-              </tr>
-             
+              
           </tbody>
       </table>
-      </div>
+  </div>
+  </div>
+  </div>
     );
   }
   
