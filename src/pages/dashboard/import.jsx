@@ -83,6 +83,12 @@ import {
                       BOE Filling
                   </th>
                   <th scope="col" class="px-6 py-3">
+                      DPD Type
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                      Container Arrival - CFS
+                  </th>
+                  <th scope="col" class="px-6 py-3">
                       DO
                   </th>
                   <th scope="col" class="px-6 py-3">
@@ -120,6 +126,9 @@ import {
                   </td>
                   <td class="px-6 py-0 text-xs">
                     19-06-2023 16:37:00
+                  </td>
+                  <td class="px-6 py-0 text-xs">
+                  19-06-2023 16:37:00
                   </td>
                   <td class="px-6 py-0 text-xs">
                   19-06-2023 16:37:00

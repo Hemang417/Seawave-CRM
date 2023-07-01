@@ -8,3 +8,5 @@ export * from "@/pages/dashboard/jobimport";
 export * from "@/pages/dashboard/export";
 export * from "@/pages/dashboard/createJob";
 export * from "@/pages/dashboard/transport";
+export * from "@/pages/dashboard/organization";
+export * from "@/pages/dashboard/Modal";
