@@ -1,98 +1,168 @@
 import {
-  Card,
-  CardHeader,
-  CardBody,
-  Typography,
-  Avatar,
-  Chip,
-  Tooltip,
-  Progress,
-} from "@material-tailwind/react";
-import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
-import { authorsTableData, projectsTableData } from "@/data";
-import modalImport from "./modalImport";
-import { useEffect, useState } from "react";
-
-export function Modal() {
-      const [showResults, setShowResults] = useState(false)
-      // const onClick = () => setShowResults(true)
-  return (
-      <div>
-          {/* Open the modal using ID.showModal() method */}
-<button className="btn" onClick={()=>window.my_modal_1.showModal()}>open modal</button>
-<dialog id="my_modal_1" className="modal w-8/12 h-4/6 mx-96">
-<form method="dialog" className="modal-box">
-        <button type="button" class="mx-96 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal">
-                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                <span class="sr-only">Close modal</span>
-        </button>
-<div class="grid gap-2 mb-3 md:grid-cols-2 m-1">
+    Card,
+    CardHeader,
+    CardBody,
+    Typography,
+    Avatar,
+    Chip,
+    Tooltip,
+    Progress,
+  } from "@material-tailwind/react";
+  import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
+  import { authorsTableData, projectsTableData } from "@/data";
+  import modalImport from "./modalImport";
+  import { useEffect, useState } from "react";
+  import {impo2d} from "./impo2d";
+  import impd2c from "./impd2c";
+  
+  export function Modal() {
+        const [isshown, setIsShown] = useState("o2d");
+        // const onClick = () => setShowResults(true)
+    return (
         <div>
-            <label for="job_received_on" class="block mb-0.5 p-0 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+            {/* Open the modal using ID.showModal() method */}
+{/* <button className="btn" onClick={()=>window.my_modal_1.showModal()}>open modal</button> */}
+<div id="my_modal_1" className="modal w-9/12 h-5/6">
+  <div method="dialog" className="modal-box">
+  <div class="grid gap-2 mb-2 md:grid-cols-6 m-2">
+        <div>
+            <label for="job_received_on" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">Job Received On</label>
         </div>
         <div>
-        <input type="text" id="job_no" class="mb-0.5 -mx-80 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+            <input type="date" id="job_received_on" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block  -mx-9 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
         </div>
         <div>
-            <label for="job_received_on" class="block mb-0.5 p-0 text-sm font-medium text-gray-900 dark:text-white">Alias</label>
+            <label for="importer_name" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">Importer Name</label>
         </div>
         <div>
-        <input type="text" id="job_no" class="mb-0.5 -mx-80 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-40 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
-        </div>
-        <div class="grid gap-0 mb-3 md:grid-cols-2 m-1">
-        <div>
-            <label for="job_received_on" class="block w-max mx-36 mb-0.5 p-0 text-sm font-medium text-gray-900 dark:text-white">Branch Name</label>
+            <input type="text" id="importer_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-12 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
         </div>
         <div>
-            <input type="text" id="job_no" class="mb-0.5 mx-14 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        <label for="countries" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">Mode</label></div>
+            <div>
+            <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-12 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected>Select</option>
+                <option value="US">Sea</option>
+                <option value="CA">Air</option>
+            </select>
+            </div>
+            <div>
+        <label for="countries" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">Container</label></div>
+            <div>
+            <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-9 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected>Select</option>
+                <option value="US">20</option>
+                <option value="CA">40</option>
+                <option value="CA">LCL</option>
+            </select>
+            </div>
+        <div>
+            <label for="HBL/HAWB" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">HBL/HAWB No.</label>
         </div>
         <div>
-            <label for="job_received_on" class="block w-max mx-36 mb-0.5 p-0 text-sm font-medium text-gray-900 dark:text-white">Address</label>
+            <input type="text" id="HBL/HAWB" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-12 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
         </div>
         <div>
-            <input type="text" id="job_no" class="mb-0.5 mx-14 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
-            <input type="text" id="job_no" class="mb-0.5 mx-14 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
-            <input type="text" id="job_no" class="mb-0.5 mx-14 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+            <label for="MBL/MAWB" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">MBL/MAWB No.</label>
         </div>
+        <div>
+            <input type="text" id="MBL/MAWB" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-12 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        <div>
+            <label for="eta_date" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">ETA Date</label>
+        </div>
+        <div>
+            <input type="date" id="eta_date" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block  -mx-9 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        <div>
+            <label for="be_no" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">BE No.</label>
+        </div>
+        <div>
+            <input type="text" id="be_no" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-12 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        <div>
+            <label for="be_date" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">BE Date</label>
+        </div>
+        <div>
+            <input type="date" id="be_date" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-12 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        <div>
+            <label for="shipping_name" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">Shipping Line Name</label>
+        </div>
+        <div>
+            <input type="text" id="shipping_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block  -mx-9 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        <div>
+            <label for="cfs_name" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">CFS Name</label>
+        </div>
+        <div>
+            <input type="text" id="cfs_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-12 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        <label for="countries" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">DPD Type</label>
+            <div>
+            <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-12 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected>Select</option>
+                <option value="US">Yes</option>
+                <option value="CA">No</option>
+            </select>
+            </div>
+        <div>
+            <label for="custom_location" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">Custom Location</label>
+        </div>
+        <div>
+            <input type="text" id="custom_location" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block  -mx-9 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        {/* <div>
+            <label for="custom_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Custom Location</label>
+            <input type="text" id="custom_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div> */}
+    </div>
+    <div>
+      <hr className="border-t border-gray-800"></hr>
+    <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-800 dark:border-gray-700 dark:text-gray-400">
+            <li class="mr-2" onClick={() => {setIsShown("o2d")}}>
+                <button>
+                <div class="inline-block p-4 bg-gray-100 rounded-t-lg active dark:bg-gray-800 dark:text-blue-500 hover:bg-gray-50">
+                    O2D
+                    {/* {showResults ? <modalImport /> : null} */}
+                    {/* {isshown} */}
+                </div>
+                </button>
+            </li>
+            <li class="mr-2" onClick={() => {setIsShown("d2c")}}>
+                <div class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">
+                    D2C
+                    {/* {isshown && <JobExport />} */}
+                </div>
+            </li>
+            <li class="mr-2">
+                <div class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">
+                    CRM
+                    {/* {isshown && <JobExport />} */}
+                </div>
+            </li>
+            <li class="mr-2">
+                <div class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">
+                    DOCUMENT TO BE UPLOADED
+                    {/* {isshown && <JobExport />} */}
+                </div>
+            </li>
+        </ul>
+        {/* {showResults === "import" && <modalImport />} */}
         
-        <div>
-            <label for="job_received_on" class="block w-max mx-36 mb-0.5 p-0 text-sm font-medium text-gray-900 dark:text-white">Email Id</label>
-        </div>
-        <div>
-            <input type="text" id="job_no" class="mb-0.5 mx-14 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
-        </div>
-        <div>
-            <label for="job_received_on" class="block w-max mx-36 mb-0.5 p-0 text-sm font-medium text-gray-900 dark:text-white">Contact No.</label>
-        </div>
-        <div>
-            <input type="text" id="job_no" class="mb-0.5 mx-14 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
-        </div>
-        <div>
-            <label for="job_received_on" class="block w-max mx-36 mb-0.5 p-0 text-sm font-medium text-gray-900 dark:text-white">PAN No.</label>
-        </div>
-        <div>
-            <input type="text" id="job_no" class="mb-0.5 mx-14 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
-        </div>
-        <div>
-            <label for="job_received_on" class="block w-max mx-36 mb-0.5 p-0 text-sm font-medium text-gray-900 dark:text-white">GST No.</label>
-        </div>
-        <div>
-            <input type="text" id="job_no" class="mb-0.5 mx-14 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
-        </div>
-        <div class="grid gap-0 mb-3 md:grid-cols-2 m-1">
-            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm mx-72 w-40 sm:w-max px-3 py-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 m-3">Submit</button>
-            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm mx-72 w-40 sm:w-max px-3 py-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 m-3">Submit</button>
-        </div>
-        <div class="grid gap-0 mb-3 md:grid-cols-1 m-1">
-            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm mx-72 w-40 sm:w-max px-3 py-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 m-3">Submit</button>
-        </div>
-        </div>
+        {isshown === "o2d" && <impo2d />}
+        {isshown === "d2c" && <impd2c />}
 
-</div> 
-</form>
-</dialog>
-      </div>        
-  );
-}
 
-export default Modal;
+    </div>
+    
+    {/* <div className="modal-action">
+      <button className="btn float-right my-56 mx-10">Save</button>
+    </div> */}
+  </div>
+</div>
+        </div>        
+    );
+  }
+  
+  export default Modal;

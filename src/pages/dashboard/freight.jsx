@@ -19,9 +19,9 @@ import {
     return (
         <div>
             {/* Open the modal using ID.showModal() method */}
-<button className="btn" onClick={()=>window.my_modal_1.showModal()}>open modal</button>
-<dialog id="my_modal_1" className="modal w-9/12 h-5/6 mx-80">
-  <form method="dialog" className="modal-box">
+{/* <button className="btn" onClick={()=>window.my_modal_1.showModal()}>open modal</button> */}
+<div id="my_modal_1" className="modal w-9/12 h-5/6">
+  <div method="dialog" className="modal-box">
   <div class="grid gap-2 mb-2 md:grid-cols-6 m-2">
         <div>
             <label for="job_received_on" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">Job Received On</label>
@@ -270,12 +270,11 @@ import {
         </div>
     </div>
     
-    <div className="modal-action">
-      {/* if there is a button in form, it will close the modal */}
+    {/* <div className="modal-action">
       <button className="btn float-right my-56 mx-10">Save</button>
-    </div>
-  </form>
-</dialog>
+    </div> */}
+  </div>
+</div>
         </div>        
     );
   }

@@ -6,9 +6,9 @@ import {
   ArrowRightOnRectangleIcon,
   UserPlusIcon,
 } from "@heroicons/react/24/solid";
-import { Home, Profile, Tables, Notifications, Import, JobExport, Export, JobImport, CreateJob, Transport, Organization, Modal } from "@/pages/dashboard";
+import { Home, Profile, Tables, Notifications, Import, JobExport, Export, JobImport, CreateJob, Transport, Organization, Modal, modorg } from "@/pages/dashboard";
 import { SignIn, SignUp } from "@/pages/auth";
-import Freight from "./pages/dashboard/freight";
+// import Freight from "./pages/dashboard/importModal";
 
 const icon = {
   className: "w-5 h-5 text-inherit",
@@ -42,6 +42,12 @@ export const routes = [
         path: "/createJob",
         element: <CreateJob />,
       },
+      {
+        icon: <TableCellsIcon {...icon} />,
+        name: "modorg",
+        path: "/modorg",
+        element: <modorg />,
+      },
       // {
       //   icon: <TableCellsIcon {...icon} />,
       //   name: "Create Job - Import",
@@ -71,12 +77,6 @@ export const routes = [
         name: "Transport",
         path: "/transport",
         element: <Transport />,
-      },
-      {
-        icon: <TableCellsIcon {...icon} />,
-        name: "Freight",
-        path: "/freight",
-        element: <Freight />,
       },
       {
         icon: <TableCellsIcon {...icon} />,

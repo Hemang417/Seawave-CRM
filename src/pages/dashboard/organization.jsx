@@ -10,6 +10,7 @@ import {
   } from "@material-tailwind/react";
   import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
   import { authorsTableData, projectsTableData } from "@/data";
+import { Link } from "react-router-dom";
   
   export function Organization() {
     return (
@@ -38,7 +39,9 @@ import {
       <table className="w-max text-sm text-center text-gray-500 dark:text-gray-500">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
-                  
+              <th scope="col" class="px-14 py-3">
+                      
+                  </th>
                   <th scope="col" class="px-14 py-3">
                       Name
                   </th>
@@ -61,6 +64,11 @@ import {
           </thead>
           <tbody>
               <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                  <th class="px-6 py-0 text-xs">
+                    <Link to={"/dashboard/Modal"}>
+                        Edit
+                      </Link>
+                  </th>
                   <td class="px-6 py-0 text-xs">
                   SEAWAVE FORWARDING AND LOGISTICS PVT LTD
                   </td>
@@ -80,6 +88,11 @@ import {
           </tbody>
           <tbody>
               <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <th class="px-6 py-0 text-xs">
+                    <Link to={"/dashboard/modorg"}>
+                        Edit
+                      </Link>
+                  </th>
                   <td class="px-6 py-0 text-xs">
                   APEXSEA LOGISTICS PVT LTD
                   </td>

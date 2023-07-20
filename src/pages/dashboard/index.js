@@ -10,3 +10,6 @@ export * from "@/pages/dashboard/createJob";
 export * from "@/pages/dashboard/transport";
 export * from "@/pages/dashboard/organization";
 export * from "@/pages/dashboard/Modal";
+export * from "@/pages/dashboard/freight";
+export * from "@/pages/dashboard/modorg";
+export * from "@/pages/dashboard/impo2d";
