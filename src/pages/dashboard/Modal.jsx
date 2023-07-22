@@ -12,8 +12,9 @@ import {
   import { authorsTableData, projectsTableData } from "@/data";
   import modalImport from "./modalImport";
   import { useEffect, useState } from "react";
-  import {impo2d} from "./impo2d";
-  import impd2c from "./impd2c";
+  import {IMPO2D} from ".";
+  import {IMPD2C} from ".";
+  
   
   export function Modal() {
         const [isshown, setIsShown] = useState("o2d");
@@ -150,8 +151,8 @@ import {
         </ul>
         {/* {showResults === "import" && <modalImport />} */}
         
-        {isshown === "o2d" && <impo2d />}
-        {isshown === "d2c" && <impd2c />}
+        {isshown === "o2d" && <IMPO2D />}
+        {isshown === "d2c" && <IMPD2C />}
 
 
     </div>

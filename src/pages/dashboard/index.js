@@ -12,4 +12,5 @@ export * from "@/pages/dashboard/organization";
 export * from "@/pages/dashboard/Modal";
 export * from "@/pages/dashboard/freight";
 export * from "@/pages/dashboard/modorg";
-export * from "@/pages/dashboard/impo2d";
+export * from "@/pages/dashboard/IMPO2D";
+export * from "@/pages/dashboard/IMPD2C";

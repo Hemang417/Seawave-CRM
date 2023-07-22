@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function impd2c(){
+export function IMPD2C(){
   return (
     <div id="divOne">
 <div class="grid gap-2 mb-3 md:grid-cols-5 m-1">
@@ -128,5 +128,5 @@ export function impd2c(){
   )
 }
 
-export default impd2c;
+export default IMPD2C;
 

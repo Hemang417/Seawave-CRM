@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function impo2d(){
+export function IMPO2D(){
   return (
     <div id="divOne">
 <div class="grid gap-2 mb-3 md:grid-cols-5 m-1">
@@ -128,4 +128,4 @@ export function impo2d(){
   )
 }
 
-export default impo2d;
+export default IMPO2D;
