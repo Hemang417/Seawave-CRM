@@ -22,10 +22,49 @@ import { Link, Route, Routes } from "react-router-dom";
     }
     return (
         <div>
+            
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg my-4 p-1">
         <div>
+      <hr className="border-t border-gray-800"></hr>
+    <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-800 dark:border-gray-700 dark:text-gray-400">
+            <li class="mr-2" onClick={() => {setIsShown("o2d")}}>
+                <button>
+                <div class="inline-block p-4 bg-gray-100 rounded-t-lg active dark:bg-gray-800 dark:text-blue-500 hover:bg-gray-50">
+                    O2D
+                    {/* {showResults ? <modalImport /> : null} */}
+                    {/* {isshown} */}
+                </div>
+                </button>
+            </li>
+            <li class="mr-2" onClick={() => {setIsShown("d2c")}}>
+                <div class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">
+                    D2C
+                    {/* {isshown && <JobExport />} */}
+                </div>
+            </li>
+            <li class="mr-2">
+                <div class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">
+                    CRM
+                    {/* {isshown && <JobExport />} */}
+                </div>
+            </li>
+            <li class="mr-2">
+                <div class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">
+                    DOCUMENT TO BE UPLOADED
+                    {/* {isshown && <JobExport />} */}
+                </div>
+            </li>
+        </ul>
+        {/* {showResults === "import" && <modalImport />} */}
+        
+        {/* {isshown === "o2d" && <IMPO2D />}
+        {isshown === "d2c" && <IMPD2C />} */}
+
+
+    </div>
+        <div>
         {/* <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Container Type</label> */}
-            <select id="countries" class=" mx-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-max p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 h-max">
+            <select id="countries" class=" mx-4 my-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-max p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 h-max">
                 <option selected>Select</option>
                 <option value="US">Job No.</option>
                 <option value="CA">HBL/HAWB No.</option>
