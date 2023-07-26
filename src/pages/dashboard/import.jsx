@@ -99,7 +99,8 @@ import { Link, Route, Routes } from "react-router-dom";
       <table className="w-max text-sm text-center text-gray-500 dark:text-gray-500">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
-                  
+                <th scope="col" class="px-6 py-3">
+                </th>
                   <th scope="col" class="px-6 py-3">
                       Date
                   </th>
@@ -166,10 +167,10 @@ import { Link, Route, Routes } from "react-router-dom";
                       RTTT5787088
                   </td>
                   <td class="px-6 py-0 text-xs">
-                      20-06-2023
+                    RTT7789909
                   </td>
                   <td class="px-6 py-0 text-xs">
-                      19-06-2023 16:37:00
+                      19-06-2023
                   </td>
                   <td class="px-6 py-0 text-xs">
                     19-06-2023 16:37:00
