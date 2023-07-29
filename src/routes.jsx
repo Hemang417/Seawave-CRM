@@ -6,7 +6,18 @@ import {
   ArrowRightOnRectangleIcon,
   UserPlusIcon,
 } from "@heroicons/react/24/solid";
-import { Home, Profile, Tables, Notifications, Import, JobExport, Export, JobImport, CreateJob, Transport, Organization, Modal, MODORG } from "@/pages/dashboard";
+import { Home, Profile, Tables, Notifications } from "@/pages/dashboard";
+import { CreateJob } from "@/pages/dashboard/createjob/createJob";
+import { Organization } from "@/pages/dashboard/organization/organization";
+import { MODORG } from "@/pages/dashboard/organization/MODORG";
+import { Import } from "@/pages/dashboard/import/import";
+import { Modal } from "@/pages/dashboard/import/Modal";
+import { Export } from "@/pages/dashboard/export/export";
+import { Transport } from "@/pages/dashboard/transport/transport";
+import { Freight } from "@/pages/dashboard/freight/freight";
+
+
+
 import { SignIn, SignUp } from "@/pages/auth";
 // import Freight from "./pages/dashboard/importModal";
 
@@ -27,25 +38,25 @@ export const routes = [
       {
         icon: <TableCellsIcon {...icon} />,
         name: "Modal",
-        path: "/modal",
+        path: "/import/Modal",
         element: <Modal />,
       },
       {
         icon: <TableCellsIcon {...icon} />,
         name: "Organization",
-        path: "/organization",
+        path: "/organization/Organization",
         element: <Organization />,
       },
       {
         icon: <TableCellsIcon {...icon} />,
         name: "Create Job",
-        path: "/createJob",
+        path: "/create job/CreateJob",
         element: <CreateJob />,
       },
       {
         icon: <TableCellsIcon {...icon} />,
         name: "modorg",
-        path: "/MODORG",
+        path: "/organization/MODORG",
         element: <MODORG />,
       },
       // {
@@ -63,19 +74,19 @@ export const routes = [
       {
         icon: <TableCellsIcon {...icon} />,
         name: "Import",
-        path: "/import",
+        path: "/import/import",
         element: <Import />,
       },
       {
         icon: <TableCellsIcon {...icon} />,
         name: "Export",
-        path: "/export",
+        path: "/export/export",
         element: <Export />,
       },
       {
         icon: <TableCellsIcon {...icon} />,
         name: "Transport",
-        path: "/transport",
+        path: "/transport/transport",
         element: <Transport />,
       },
       {

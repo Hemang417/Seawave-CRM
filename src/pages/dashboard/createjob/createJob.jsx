@@ -1,9 +1,9 @@
 import React from 'react'
-import { JobImport } from '.';
-import { JobExport } from '.';
+import { JobImport } from './jobimport';
+import { JobExport } from './jobexport';
 import { BrowserRouter, Link, NavLink, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
-import "../../../public/css/textColor.css";
+import "../../../../public/css/textcolor.css";
 
 export function CreateJob() {
     const [isshown, setIsShown] = useState("import");

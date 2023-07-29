@@ -10,10 +10,10 @@ import {
   } from "@material-tailwind/react";
   import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
   import { authorsTableData, projectsTableData } from "@/data";
-  import modalImport from "./modalImport";
+//   import modalImport from "./modalImport";
   import { useEffect, useState } from "react";
-  import {IMPO2D} from ".";
-  import {IMPD2C} from ".";
+  import {IMPO2D} from "./IMPO2D";
+  import {IMPD2C} from "./IMPD2C";
   
   
   export function Modal() {
