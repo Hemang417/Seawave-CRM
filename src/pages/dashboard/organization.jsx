@@ -65,7 +65,7 @@ import { Link } from "react-router-dom";
           <tbody>
               <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                   <th class="px-6 py-0 text-xs">
-                    <Link to={"/dashboard/Modal"}>
+                    <Link to={"/dashboard/MODORG"}>
                         Edit
                       </Link>
                   </th>
@@ -89,7 +89,7 @@ import { Link } from "react-router-dom";
           <tbody>
               <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
               <th class="px-6 py-0 text-xs">
-                    <Link to={"/dashboard/modorg"}>
+                    <Link to={"/dashboard/MODORG"}>
                         Edit
                       </Link>
                   </th>

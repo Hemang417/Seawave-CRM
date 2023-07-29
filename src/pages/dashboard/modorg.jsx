@@ -12,7 +12,7 @@ import {
   import { authorsTableData, projectsTableData } from "@/data";
   import { useEffect, useState } from "react";
   
-  export function modorg() {
+  export function MODORG() {
         const [showResults, setShowResults] = useState(false)
         // const onClick = () => setShowResults(true)
     return (
@@ -21,10 +21,6 @@ import {
   {/* <button className="btn" onClick={()=>window.my_modal_1.showModal()}>open modal</button> */}
   <div id="my_modal_1" className="modal w-8/12 h-4/6">
   <div method="dialog" className="modal-box">
-          <button type="button" class="mx-96 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal">
-                  <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                  <span class="sr-only">Close modal</span>
-          </button>
   <div class="grid gap-2 mb-3 md:grid-cols-2 m-1">
           <div>
               <label for="job_received_on" class="block mb-0.5 p-0 text-sm font-medium text-gray-900 dark:text-white">Name</label>
@@ -94,4 +90,4 @@ import {
     );
   }
   
-  export default modorg;
+  export default MODORG;
