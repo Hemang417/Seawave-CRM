@@ -23,7 +23,7 @@ import {
         <div>
             {/* Open the modal using ID.showModal() method */}
 {/* <button className="btn" onClick={()=>window.my_modal_1.showModal()}>open modal</button> */}
-<div id="my_modal_1" className="modal w-9/12 h-5/6">
+<div id="my_modal_1" className="modal w-full h-5/6">
   <div method="dialog" className="modal-box">
   <div class="grid gap-2 mb-2 md:grid-cols-6 m-2">
         <div>

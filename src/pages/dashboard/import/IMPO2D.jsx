@@ -19,7 +19,7 @@ export function IMPO2D(){
     <label for="job_received_on" class="block mb-2 text-sm font-xs text-gray-900 dark:text-white">Billing</label>
 </div>
 <div>
-    <label for="job_no" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mx-4">Plan Date</label>
+    <label for="job_no" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mx-2">Plan Date</label>
     <input type="datetime-local" id="job_no" class="mb-1 -mx-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-max p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
     <input type="datetime-local" id="job_no" class="mb-1 -mx-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-max p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
     <input type="datetime-local" id="job_no" class="mb-1 -mx-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-max p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
@@ -37,50 +37,50 @@ export function IMPO2D(){
 </div>
 <div className="flex flex-row mx-6">
   <div className="flex flex-col">
-  <label for="importer_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mx-2">Actual Date</label>
+  <label for="importer_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white -mx-8">Actual Date</label>
   <div className="flex flex-row">
-  <input type="datetime-local" id="importer_name" class="mb-1 -mx-5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
-  <input type="checkbox"/>
+  <input type="datetime-local" id="importer_name" class="mb-1 -mx-16 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
+  <input type="checkbox" class="mx-20"/>
   </div>
   <div className="flex flex-row">
-  <input type="datetime-local" id="importer_name" class="mb-1 -mx-5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
-  <input type="checkbox"/>
+  <input type="datetime-local" id="importer_name" class="mb-1 -mx-16 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
+  <input type="checkbox" class="mx-20"/>
   </div>
   <div className="flex flex-row">
-  <input type="datetime-local" id="importer_name" class="mb-1 -mx-5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
-  <input type="checkbox"/>
+  <input type="datetime-local" id="importer_name" class="mb-1 -mx-16 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
+  <input type="checkbox" class="mx-20"/>
   </div>
   <div className="flex flex-row">
-  <input type="datetime-local" id="importer_name" class="mb-1 -mx-5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
-  <input type="checkbox"/>
+  <input type="datetime-local" id="importer_name" class="mb-1 -mx-16 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
+  <input type="checkbox" class="mx-20"/>
   </div>
   <div className="flex flex-row">
-  <input type="datetime-local" id="importer_name" class="mb-1 -mx-5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
-  <input type="checkbox"/>
+  <input type="datetime-local" id="importer_name" class="mb-1 -mx-16 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
+  <input type="checkbox" class="mx-20"/>
   </div>
   <div className="flex flex-row">
-  <input type="datetime-local" id="importer_name" class="mb-1 -mx-5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
-  <input type="checkbox"/>
+  <input type="datetime-local" id="importer_name" class="mb-1 -mx-16 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
+  <input type="checkbox" class="mx-20"/>
   </div>
   <div className="flex flex-row">
-  <input type="datetime-local" id="importer_name" class="mb-1 -mx-5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
-  <input type="checkbox"/>
+  <input type="datetime-local" id="importer_name" class="mb-1 -mx-16 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
+  <input type="checkbox" class="mx-20"/>
   </div>
   <div className="flex flex-row">
-  <input type="datetime-local" id="importer_name" class="mb-1 -mx-5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
-  <input type="checkbox"/>
+  <input type="datetime-local" id="importer_name" class="mb-1 -mx-16 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
+  <input type="checkbox" class="mx-20"/>
   </div>
   <div className="flex flex-row">
-  <input type="datetime-local" id="importer_name" class="mb-1 -mx-5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
-  <input type="checkbox"/>
+  <input type="datetime-local" id="importer_name" class="mb-1 -mx-16 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
+  <input type="checkbox" class="mx-20"/>
   </div>
   <div className="flex flex-row">
-  <input type="datetime-local" id="importer_name" class="mb-1 -mx-5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
-  <input type="checkbox"/>
+  <input type="datetime-local" id="importer_name" class="mb-1 -mx-16 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
+  <input type="checkbox" class="mx-20"/>
   </div>
   <div className="flex flex-row">
-  <input type="datetime-local" id="importer_name" class="mb-1 -mx-5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
-  <input type="checkbox"/>
+  <input type="datetime-local" id="importer_name" class="mb-1 -mx-16 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> 
+  <input type="checkbox"class="mx-20"/>
   </div>
   
   {/* <input type="datetime-local" id="importer_name" class="mb-1 -mx-20 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-1 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
@@ -93,8 +93,8 @@ export function IMPO2D(){
 
 </div>
 <div className="mx-20">
-    <label for="importer_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mx-10">Delay</label>
-    <div>
+    <label for="importer_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white -mx-10">Delay</label>
+    <div class="-mx-24">
     <input type="datetime-local" id="importer_name" class="mb-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-3 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
     <input type="datetime-local" id="importer_name" class="mb-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-3 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
     <input type="datetime-local" id="importer_name" class="mb-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-3 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
@@ -108,7 +108,7 @@ export function IMPO2D(){
     <input type="datetime-local" id="importer_name" class="mb-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mx-3 p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
     </div>
    </div>
-<div className="mx-32">
+<div className="-mx-4">
     <label for="importer_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Remarks</label>
     <input type="text" id="importer_name" class="mb-1 mx-0 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-max p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
     <input type="text" id="importer_name" class="mb-1 mx-0 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-max p-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />

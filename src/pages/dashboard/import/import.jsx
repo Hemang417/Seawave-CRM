@@ -23,7 +23,7 @@ import { Link, Route, Routes } from "react-router-dom";
     return (
         <div>
             
-        <div className="relative overflow-x-auto shadow-md sm:rounded-lg my-4 p-1">
+        <div className="relative shadow-md sm:rounded-lg my-4 p-1">
         <div>
       <hr className="border-t border-gray-800"></hr>
     <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-800 dark:border-gray-700 dark:text-gray-400">
@@ -95,7 +95,7 @@ import { Link, Route, Routes } from "react-router-dom";
 </div>
 </div>
 <button type="submit" class="mx-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring- focus:outline-none focus:ring-blue-300 font-small rounded-lg text-sm w-max sm:w-max px-8 py-2.5 text-left dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 m-0">Search</button>
-        <div className="relative overflow-x-max shadow-md sm:rounded-lg">
+        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
       <table className="w-max text-sm text-center text-gray-500 dark:text-gray-500">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
