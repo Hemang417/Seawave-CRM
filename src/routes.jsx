@@ -35,12 +35,13 @@ export const routes = [
         path: "/home",
         element: <Home />,
       },
-      // {
-      //   icon: <TableCellsIcon {...icon} />,
-      //   name: "Modal",
-      //   path: "/import/Modal",
-      //   element: <Modal />,
-      // },
+      {
+        icon: <TableCellsIcon {...icon} />,
+        name: "Modal",
+        path: "/import/Modal",
+        element: <Modal />,
+        dontShowToShidebar: true
+      },
       {
         icon: <TableCellsIcon {...icon} />,
         name: "Organization",
@@ -58,6 +59,7 @@ export const routes = [
         name: "modorg",
         path: "/organization/MODORG",
         element: <MODORG />,
+        dontShowToShidebar: true
       },
       // {
       //   icon: <TableCellsIcon {...icon} />,

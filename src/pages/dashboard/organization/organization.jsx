@@ -65,9 +65,12 @@ import { Link } from "react-router-dom";
           <tbody>
               <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                   <th class="px-6 py-0 text-xs">
-                    <Link to={"/dashboard/MODORG"}>
+                    {/* <Link to={"/dashboard/organization/MODORG"}>
                         Edit
-                      </Link>
+                      </Link> */}
+                      <a href="/dashboard/organization/MODORG" target="_blank" rel="noopener noreferrer">
+                        Edit
+                    </a> 
                   </th>
                   <td class="px-6 py-0 text-xs">
                   SEAWAVE FORWARDING AND LOGISTICS PVT LTD
