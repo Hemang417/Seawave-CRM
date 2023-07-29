@@ -14,7 +14,7 @@ import {
 //   import { modalImport } from "./modalImport";
 import { useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
-  
+
   export function Import() {
     const [showModal, setShowModal] = useState(false);
     function modalimport(){
@@ -150,9 +150,12 @@ import { Link, Route, Routes } from "react-router-dom";
               <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                   
                 <th scope="row" class="px-4 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <Link to={"/dashboard/Modal"}>
+                      {/* <Link to={"/dashboard/Modal"}>
                         Edit
-                      </Link>
+                      </Link> */}
+                    <a href="/dashboard/import/Modal" target="_blank" rel="noopener noreferrer">
+                        Edit
+                    </a>  
                   </th>
                   <th scope="row" class="px-4 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                       19-06-2023 16:37:00

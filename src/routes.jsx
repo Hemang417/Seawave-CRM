@@ -35,12 +35,12 @@ export const routes = [
         path: "/home",
         element: <Home />,
       },
-      {
-        icon: <TableCellsIcon {...icon} />,
-        name: "Modal",
-        path: "/import/Modal",
-        element: <Modal />,
-      },
+      // {
+      //   icon: <TableCellsIcon {...icon} />,
+      //   name: "Modal",
+      //   path: "/import/Modal",
+      //   element: <Modal />,
+      // },
       {
         icon: <TableCellsIcon {...icon} />,
         name: "Organization",
