@@ -6,7 +6,7 @@ import {
   ArrowRightOnRectangleIcon,
   UserPlusIcon,
 } from "@heroicons/react/24/solid";
-import { Home, Profile, Tables, Notifications } from "@/pages/dashboard";
+import { Home, Profile, Tables, Notifications, IMPCUSTOMER, EXPModal, EXPCUSTOMER } from "@/pages/dashboard";
 import { CreateJob } from "@/pages/dashboard/createjob/createJob";
 import { Organization } from "@/pages/dashboard/organization/organization";
 import { MODORG } from "@/pages/dashboard/organization/MODORG";
@@ -44,6 +44,13 @@ export const routes = [
       },
       {
         icon: <TableCellsIcon {...icon} />,
+        name: "Modal",
+        path: "/export/EXPModal",
+        element: <EXPModal />,
+        dontShowToShidebar: true
+      },
+      {
+        icon: <TableCellsIcon {...icon} />,
         name: "Organization",
         path: "/organization/Organization",
         element: <Organization />,
@@ -59,6 +66,20 @@ export const routes = [
         name: "modorg",
         path: "/organization/MODORG",
         element: <MODORG />,
+        dontShowToShidebar: true
+      },
+      {
+        icon: <TableCellsIcon {...icon} />,
+        name: "modorg",
+        path: "/import/IMPCUSTOMER",
+        element: <IMPCUSTOMER />,
+        dontShowToShidebar: true
+      },
+      {
+        icon: <TableCellsIcon {...icon} />,
+        name: "modorg",
+        path: "/export/EXPCUSTOMER",
+        element: <EXPCUSTOMER />,
         dontShowToShidebar: true
       },
       // {

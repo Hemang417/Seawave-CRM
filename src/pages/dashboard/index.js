@@ -14,3 +14,8 @@ export * from "@/pages/dashboard/freight/freight";
 export * from "@/pages/dashboard/organization/MODORG";
 export * from "@/pages/dashboard/import/IMPO2D";
 export * from "@/pages/dashboard/import/IMPD2C";
+export * from "@/pages/dashboard/import/IMPCUSTOMER";
+export * from "@/pages/dashboard/export/EXPModal";
+export * from "@/pages/dashboard/export/EXPCUSTOMER";
+export * from "@/pages/dashboard/export/EXPO2D";
+

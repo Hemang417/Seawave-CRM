@@ -12,12 +12,14 @@ import {
   import { authorsTableData, projectsTableData } from "@/data";
 //   import modalImport from "./modalImport";
   import { useEffect, useState } from "react";
-  import {IMPO2D} from "./IMPO2D";
-  import {IMPD2C} from "./IMPD2C";
-  import { IMPCUSTOMER } from "./IMPCUSTOMER";
+import { EXPCUSTOMER } from "./EXPCUSTOMER";
+import { EXPO2D } from "..";
+//   import {IMPO2D} from "./IMPO2D";
+//   import {IMPD2C} from "./IMPD2C";
+//   import { IMPCUSTOMER } from "./IMPCUSTOMER";
   
   
-  export function Modal() {
+  export function EXPModal() {
         const [isshown, setIsShown] = useState("customerdetails");
         // const onClick = () => setShowResults(true)
     return (
@@ -34,7 +36,7 @@ import {
             <input type="date" id="job_received_on" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block  -mx-9 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
         </div>
         <div>
-            <label for="importer_name" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">Importer Name</label>
+            <label for="importer_name" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">Exporter Name</label>
         </div>
         <div>
             <input type="text" id="importer_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-12 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
@@ -49,7 +51,7 @@ import {
             </select>
             </div>
             <div>
-        <label for="countries" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">Container</label></div>
+        <label for="countries" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">Container Type</label></div>
             <div>
             <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-9 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option selected>Select</option>
@@ -59,65 +61,48 @@ import {
             </select>
             </div>
         <div>
-            <label for="HBL/HAWB" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">HBL/HAWB No.</label>
+            <label for="HBL/HAWB" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">SB No.</label>
         </div>
         <div>
             <input type="text" id="HBL/HAWB" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-12 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
         </div>
         <div>
-            <label for="MBL/MAWB" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">MBL/MAWB No.</label>
+            <label for="eta_date" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">SB Date</label>
         </div>
         <div>
-            <input type="text" id="MBL/MAWB" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-12 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+            <input type="date" id="eta_date" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-12 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
         </div>
         <div>
-            <label for="eta_date" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">ETA Date</label>
+            <label for="be_no" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">No. of Container</label>
         </div>
         <div>
-            <input type="date" id="eta_date" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block  -mx-9 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+            <input type="text" id="job_received_on" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block  -mx-9 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
         </div>
         <div>
-            <label for="be_no" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">BE No.</label>
-        </div>
-        <div>
-            <input type="text" id="be_no" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-12 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
-        </div>
-        <div>
-            <label for="be_date" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">BE Date</label>
+            <label for="be_date" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">Custome House</label>
         </div>
         <div>
             <input type="date" id="be_date" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-12 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
         </div>
         <div>
-            <label for="shipping_name" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">Shipping Line Name</label>
+            <label for="shipping_name" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">Destination Port</label>
         </div>
         <div>
-            <input type="text" id="shipping_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block  -mx-9 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+            <input type="text" id="shipping_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-12 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
         </div>
         <div>
-            <label for="cfs_name" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">CFS Name</label>
+            <label for="cfs_name" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">Buffer Yard</label>
         </div>
         <div>
-            <input type="text" id="cfs_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-12 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+            <input type="text" id="job_received_on" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block  -mx-9 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
         </div>
-        <label for="countries" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">DPD Type</label>
-            <div>
-            <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-12 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <option selected>Select</option>
-                <option value="US">Yes</option>
-                <option value="CA">No</option>
-            </select>
-            </div>
+        
         <div>
-            <label for="custom_location" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">Custom Location</label>
+            <label for="custom_location" class="block mb-2 text-xs font-sans text-gray-900 dark:text-white">Shipping Line</label>
         </div>
         <div>
-            <input type="text" id="custom_location" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block  -mx-9 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+            <input type="text" id="HBL/HAWB" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block -mx-12 -my-1 w-40 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
         </div>
-        {/* <div>
-            <label for="custom_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Custom Location</label>
-            <input type="text" id="custom_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
-        </div> */}
     </div>
     <div>
       <hr className="border-t border-gray-800"></hr>
@@ -162,9 +147,9 @@ import {
         {/* {showResults === "import" && <modalImport />} */}
 
 
-        {isshown === "customerdetails" && <IMPCUSTOMER />}
-        {isshown === "o2d" && <IMPO2D />}
-        {isshown === "d2c" && <IMPD2C />}
+        {isshown === "customerdetails" && <EXPCUSTOMER />}
+        {isshown === "o2d" && <EXPO2D />}
+        {/* {isshown === "d2c" && <IMPD2C />} */}
 
 
     </div>
@@ -178,4 +163,4 @@ import {
     );
   }
   
-  export default Modal;
+  export default EXPModal;
