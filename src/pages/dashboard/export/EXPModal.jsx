@@ -107,7 +107,7 @@ import { EXPO2D } from "..";
     <div>
       <hr className="border-t border-gray-800"></hr>
     <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-800 dark:border-gray-700 dark:text-gray-400">
-    <li class="mr-2" onClick={() => {setIsShown("customerdetails")}}>
+            <li class="mr-2" onClick={() => {setIsShown("customerdetails")}}>
                 <button>
                 <div class="inline-block p-4 bg-gray-100 rounded-t-lg active dark:bg-gray-800 dark:text-blue-500 hover:bg-gray-50">
                     Customer Details
@@ -126,10 +126,13 @@ import { EXPO2D } from "..";
                 </button>
             </li>
             <li class="mr-2" onClick={() => {setIsShown("d2c")}}>
-                <div class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">
+                <button>
+                <div class="inline-block p-4 bg-gray-100 rounded-t-lg active dark:bg-gray-800 dark:text-blue-500 hover:bg-gray-50">
                     D2C
-                    {/* {isshown && <JobExport />} */}
+                    {/* {showResults ? <modalImport /> : null} */}
+                    {/* {isshown} */}
                 </div>
+                </button>
             </li>
             <li class="mr-2">
                 <div class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">
