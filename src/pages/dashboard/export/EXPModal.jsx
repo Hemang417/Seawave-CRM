@@ -134,17 +134,14 @@ import { EXPO2D } from "..";
                 </div>
                 </button>
             </li>
-            <li class="mr-2">
-                <div class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">
-                    CRM
-                    {/* {isshown && <JobExport />} */}
+            <li class="mr-2" onClick={() => {setIsShown("uploaddocuments")}}>
+                <button>
+                <div class="inline-block p-4 bg-gray-100 rounded-t-lg active dark:bg-gray-800 dark:text-blue-500 hover:bg-gray-50">
+                    Upload Documents
+                    {/* {showResults ? <modalImport /> : null} */}
+                    {/* {isshown} */}
                 </div>
-            </li>
-            <li class="mr-2">
-                <div class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">
-                    DOCUMENT TO BE UPLOADED
-                    {/* {isshown && <JobExport />} */}
-                </div>
+                </button>
             </li>
         </ul>
         {/* {showResults === "import" && <modalImport />} */}
