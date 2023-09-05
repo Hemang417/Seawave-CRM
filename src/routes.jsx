@@ -99,6 +99,23 @@ export const routes = [
         name: "Import",
         path: "/import/import",
         element: <Import />,
+        items: [
+          {
+            name: "Dashboard",
+            path: "/home",
+            // element: <Home />,
+          },
+          {
+            name: "Job Creation",
+            path: "/createjob/jobimport",
+            element: <Home />,
+          },
+          {
+            name: "Process",
+            path: "/import/import",
+            element: <Home />,
+          },
+        ]
       },
       {
         icon: <TableCellsIcon {...icon} />,
@@ -136,38 +153,38 @@ export const routes = [
         path: "/profile",
         element: <Profile />,
       },
-      {
-        icon: <HomeIcon {...icon} />,
-        name: "Menu",
-        items: [
-          {
-            name: "Sub Menu1",
-            path: "/home1",
-            element: <Home />,
-          },
-          {
-            name: "Sub Menu2",
-            path: "/home2",
-            element: <Home />,
-          }
-        ]
-      },
-      {
-        icon: <HomeIcon {...icon} />,
-        name: "Menu1",
-        items: [
-          {
-            name: "Sub Menu1",
-            path: "/home3",
-            element: <Home />,
-          },
-          {
-            name: "Sub Menu2",
-            path: "/home4",
-            element: <Home />,
-          }
-        ]
-      }
+      // {
+      //   icon: <HomeIcon {...icon} />,
+      //   name: "Menu",
+      //   items: [
+      //     {
+      //       name: "Sub Menu1",
+      //       path: "/home1",
+      //       element: <Home />,
+      //     },
+      //     {
+      //       name: "Sub Menu2",
+      //       path: "/home2",
+      //       element: <Home />,
+      //     }
+      //   ]
+      // },
+      // {
+      //   icon: <HomeIcon {...icon} />,
+      //   name: "Menu1",
+      //   items: [
+      //     {
+      //       name: "Sub Menu1",
+      //       path: "/home3",
+      //       element: <Home />,
+      //     },
+      //     {
+      //       name: "Sub Menu2",
+      //       path: "/home4",
+      //       element: <Home />,
+      //     }
+      //   ]
+      // }
     ],
   },
   {
